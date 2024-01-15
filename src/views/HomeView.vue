@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import Navbar from '@/components/header/navbar.vue';
+
 </script>
 
 <template>
   <main>
+    <Navbar/>
     <h1>Hello</h1>
-    <p>Wellcome to chamba</p>
   </main>
 </template>
