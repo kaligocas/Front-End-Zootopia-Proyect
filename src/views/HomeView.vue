@@ -6,6 +6,6 @@ import Navbar from '@/components/header/navbar.vue';
 <template>
   <main>
     <Navbar/>
-    <h1>Hello</h1>
+    <h1>Hello probando otra cosa</h1>
   </main>
 </template>
