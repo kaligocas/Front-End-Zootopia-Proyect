@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import CardAnimals from '../components/animals/CardAnimals.vue'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap'
+
 </script>
 <template>
     <div>

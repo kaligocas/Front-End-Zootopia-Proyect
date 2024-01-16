@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import { watchEffect } from 'vue';
+import { computed, ref } from 'vue';
 import { useAnimalsStore } from '../../stores/animalsStore';
 
 interface Animal {
@@ -16,38 +15,28 @@ interface Animal {
 }
 
 const animalStore = useAnimalsStore();
-const allAnimals = animalStore.animals;
-
-const itemsPerPage = 10;
-let currentPage = 1;
-
-const calculateRange = () => {
- const startIndex = (currentPage - 1) * itemsPerPage;
- const endIndex = Math.min(startIndex + itemsPerPage, allAnimals.length);
- return { startIndex, endIndex };
-};
-
-let paginatedAnimals: Animal[] = [];
-
-watchEffect(() => {
- const { startIndex, endIndex } = calculateRange();
- paginatedAnimals = allAnimals.slice(startIndex, endIndex);
-});
-
-const changePage = (newPage: number) => {
- currentPage = newPage;
-};
+const allAnimals = ref<Animal[]>(animalStore.animals);
+const itemsPerPage = 4;
+const currentPage = ref(1);
+const pages = computed(() => Math.ceil(allAnimals.value.length / itemsPerPage));
 
 const sendEditForm = (animalId: number) => {
- // Lógica para enviar el formulario de edición
+  // Lógica para enviar el formulario de edición
+}
+
+const changePage = (page: number) => {
+  if (page >= 1 && page <= pages.value) {
+    currentPage.value = page;
+  }
 }
 </script>
+
 <template>
   <div class="animals">
-  <div class="animals-cards">
-   <div v-for="(animal, index) in paginatedAnimals" :key="animal.id" class="animal-card">
-     <img :src="animal.image" :alt="animal.title">
-     <div class="info-card">
+    <div class="animals-cards">
+      <div v-for="(animal, index) in allAnimals.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" :key="animal.id" class="animal-card">
+      <img :src="animal.image" :alt="animal.title">
+       <div class="info-card">
        <h3>{{ animal.title }}</h3>
        <h5>Familia: {{ animal.family }}</h5>
        <h5>Genero: {{ animal.gener }}</h5>
@@ -59,25 +48,22 @@ const sendEditForm = (animalId: number) => {
      </div>
    </div>
   </div>
- 
-  <nav aria-label="Page navigation example">
-   <ul class="pagination justify-content-end">
-     <li class="page-item" :class="{ disabled: currentPage === 1 }">
-       <button class="page-link" @click="changePage(currentPage - 1)" :disabled="currentPage === 1">Previous</button>
-     </li>
-     <li class="page-item" v-for="page in Math.ceil(allAnimals.length / itemsPerPage)" :key="page">
-       <button class="page-link" @click="changePage(page)">{{ page }}</button>
-     </li>
-     <li class="page-item" :class="{ disabled: currentPage === Math.ceil(allAnimals.length / itemsPerPage) }">
-       <button class="page-link" @click="changePage(currentPage + 1)" :disabled="currentPage === Math.ceil(allAnimals.length / itemsPerPage)">Next</button>
-     </li>
-   </ul>
-  </nav>
+
+    <nav class= "mt-2" aria-label="page">
+      <ul class="pagination active pagination-lg justify-content-center" aria-current="page">
+        <li class="page-item" :class="{ disabled: currentPage === 1 }">
+          <button class="page-link" @click="changePage(currentPage - 1)" :disabled="currentPage === 1"><i class="bi bi-arrow-left"></i></button>
+        </li>
+        <li class="page-item" v-for="page in pages" :key="page">
+          <button class="page-link" @click="changePage(page)">{{ page }}</button>
+        </li>
+        <li class="page-item" :class="{ disabled: currentPage === pages }">
+          <button class="page-link" @click="changePage(currentPage + 1)" :disabled="currentPage === pages"><i class="bi bi-arrow-right"></i></button>
+        </li>
+      </ul>
+    </nav>
   </div>
- </template>
-
-
-
+</template>
 
 <style lang="scss">
 .animals-cards {
@@ -93,7 +79,8 @@ const sendEditForm = (animalId: number) => {
    border-radius: 3rem;
    text-align: center;
    background-color: #656D4A;
-
+   max-width: 23rem;
+   font-size: 100%;
    img {
      width: 20rem;
      height: 20rem;
@@ -115,6 +102,7 @@ const sendEditForm = (animalId: number) => {
            margin-left: 10rem;
        }
    }
+
  }
 }
 </style>
