@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap';
 
 </script>
 
