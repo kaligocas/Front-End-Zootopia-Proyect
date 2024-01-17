@@ -24,7 +24,7 @@
           <a class="nav-link" href="#">Animales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Añadir</a>
+          <a class="nav-link " href="/Add">Añadir</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="#">Editar</a>
