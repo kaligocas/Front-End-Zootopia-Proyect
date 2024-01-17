@@ -43,21 +43,7 @@
 </template>
 
 <script lang="ts">
-  export default{
-    data(){
-      return{
-
-      }
-    },
-    methods: {
-      agregarAnimal(e){
-
-        e.preventDefault();
-        
-        alert("Enviado");
-      }
-    },
-  }
+  
 </script>
 
 <style scoped lang="scss">

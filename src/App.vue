@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Add from './components/Add.vue';
+import Edit from './components/Edit.vue';
 
 
 
@@ -22,7 +23,8 @@ import Add from './components/Add.vue';
       </nav>
     </div>
   </header>
-  <Add></Add>
+  <Add/>
+  <Edit/>
 
   <RouterView />
 </template>
