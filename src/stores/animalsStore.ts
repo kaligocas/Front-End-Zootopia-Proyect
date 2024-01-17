@@ -211,7 +211,7 @@ export const useAnimalsStore = defineStore('animals', () => {
             origin: 'Sudamérica',
             date: 'date',
             tipe: 'Boidae',
-            title: 'Serp. Anaconda',
+            title: 'Anaconda',
         },
         {
             id: 19,
@@ -222,7 +222,7 @@ export const useAnimalsStore = defineStore('animals', () => {
             origin: 'América del Sur',
             date: 'date',
             tipe: 'Crotalus',
-            title: 'Serp. Cascabel',
+            title: 'Cascabel',
         },
 
         {
