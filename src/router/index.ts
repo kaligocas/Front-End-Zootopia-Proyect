@@ -14,21 +14,24 @@ const router = createRouter({
       name: 'Inicio',
       component: HomeView
     },
-/*     {
+     {
       path: '/Familias',
       name: 'Familias',
-      component: FamilyView
-    },
+      component: FamilyViewVue
+    }, 
     {
-      path: '/Animales',
-      name: 'Animales',
-      component: AnimalsViewVue
+      path: '/animals',
+      name: 'animals',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/AnimalsView.vue')
     },
     {
       path: '/Add',
       name: 'Añadir',
       component: AddViewVue
-    },
+    }, 
     {
       path: '/Edit',
       name: 'Editar',
@@ -38,7 +41,7 @@ const router = createRouter({
       path: '/Buscar',
       name: 'Buscar',
       component: FiltersPageViewVue
-    }, */
+    }, 
 
     // {
     //   path: '/about',

@@ -13,9 +13,9 @@ import Footer from './components/footer/Footer.vue';
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home  </RouterLink>
+        <RouterLink to="/">Inicio  </RouterLink>
         <RouterLink to="/Familias"> Familias</RouterLink>
-        <RouterLink to="/Animales"> Animales</RouterLink>
+        <RouterLink to="/animals"> Animals </RouterLink>
         <RouterLink to="/Add"> Añadir</RouterLink>
         <RouterLink to="/Edit"> Editar</RouterLink>
         <RouterLink to="/Buscar"> Buscar</RouterLink>
@@ -23,10 +23,9 @@ import Footer from './components/footer/Footer.vue';
     </div>
   </header>
 
-<Footer>
-  
-</Footer>
   <RouterView />
+
+  <Footer/>
 </template>
 
 <style scoped lang="scss">
