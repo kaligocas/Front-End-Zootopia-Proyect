@@ -1,6 +1,6 @@
 <script setup lang ="ts">
-    import Form from './AddView.vue'
+    import Add from '../components/Add.vue'
 </script>
 <template>
-    <AddView/>
+    <Add/>
 </template>

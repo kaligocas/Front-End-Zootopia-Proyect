@@ -1,6 +1,6 @@
 <script setup lang="ts">
-    import Edit from './EditView.vue'
+    import Edit from '../components/Edit.vue'
 </script>
 <template>
-    <EditView></EditView>
+    <Edit/>
 </template>

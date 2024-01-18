@@ -12,13 +12,13 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/',
-      name: 'añadir',
+      path: '/Add',
+      name: 'Añadir',
       component: AddViewVue
     },
     {
-      path: '/',
-      name: 'editar',
+      path: '/Edit',
+      name: 'Editar',
       component: EditViewVue
     },
 

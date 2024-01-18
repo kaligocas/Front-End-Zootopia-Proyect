@@ -1,12 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Add from './components/Add.vue';
-import Edit from './components/Edit.vue';
-
-
-
-
-
  
 </script>
 
@@ -19,12 +12,13 @@ import Edit from './components/Edit.vue';
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <router-link to="/añadir">Añadir</router-link>
+        <router-link to="/Add">Añadir</router-link>
+        <router-link to="/Edit">Editar</router-link>
+
       </nav>
     </div>
   </header>
-  <Add/>
-  <Edit/>
+  
 
   <RouterView />
 </template>
