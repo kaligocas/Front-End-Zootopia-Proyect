@@ -14,7 +14,7 @@ const router = createRouter({
       name: 'Inicio',
       component: HomeView
     },
-    {
+/*     {
       path: '/Familias',
       name: 'Familias',
       component: FamilyView
@@ -38,7 +38,7 @@ const router = createRouter({
       path: '/Buscar',
       name: 'Buscar',
       component: FiltersPageViewVue
-    },
+    }, */
 
     // {
     //   path: '/about',
