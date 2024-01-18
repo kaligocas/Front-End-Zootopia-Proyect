@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AddViewVue from '@/views/AddView.vue'
 import FamilyViewVue from '@/views/FamilyView.vue'
-import AnimalsViewVue from '@/views/AnimalsView.vue'
 import EditViewVue from '@/views/EditView.vue'
 import FiltersPageViewVue from '@/views/FiltersPageView.vue'
 
@@ -51,23 +50,6 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // }
-       {
-      path: '/animals',
-      name: 'animals',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AnimalsView.vue')
-    },
-    {
-      path: '/form',
-      name: 'form',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/FormView.vue')
-    }
-
   ]
 })
 
