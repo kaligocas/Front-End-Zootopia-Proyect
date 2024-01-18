@@ -300,9 +300,11 @@ export const useAnimalsStore = defineStore('animals', () => {
             title: 'Zorro Nival',
         }
     ]);
+
     function addAnimal(newAnimal: Animal) {
         animals.push(newAnimal);
     }
+
     return {
         animals,
         addAnimal
