@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<h1><nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">Zootopia</a>
     <img class= "img-logo" width="90" height="90" src="../../assets/img/icons8-cat-footprint-96 (1).png" alt="cat-footprint"/>
 
@@ -39,7 +39,7 @@
     </div>
   </div>
 </nav>
-</h1>
+
 </template>
 <style scoped lang="scss">
 @import '../../assets/navbar.scss';
