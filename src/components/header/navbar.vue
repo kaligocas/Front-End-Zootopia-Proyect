@@ -15,22 +15,22 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Familias</a>
+          <a class="nav-link" href="/Familias">Familias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Animales</a>
+          <a class="nav-link" href="/animals">Animales</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="/Add">Añadir</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Editar</a>
+          <a class="nav-link " href="/Edit">Editar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Buscar</a>
+          <a class="nav-link " href="/Buscar">Buscar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="#">LogOut</a>
