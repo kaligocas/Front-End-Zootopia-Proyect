@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/Familias',
       name: 'Familias',
-      component: FamilyViewVue
+      component: FamilyView
     },
     {
       path: '/Animales',
